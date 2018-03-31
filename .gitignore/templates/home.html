@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+    <h2 align="center">Enter Your Details</h2></br>
+    <form action="{{ url_for('home') }}" method="post">
+    <table align = "center" style="width: 492px; height: 172px;" border="0">
+      <tbody>
+        <tr>
+            <td><b>Name :</b></td>
+          <td><input name="name" placeholder="" required="required"  type="text"><br>
+          </td>
+        </tr>
+        <tr>
+            <td style="width: 155px;"><b>Vehicle Number : </b></td>
+          <td style="width: 75px;"><input name="vn" placeholder="" required="required"  type="text"> </td>
+        </tr>
+        <tr>
+            <td><b>Phone Number : </b></td>
+          <td><input name="phone" placeholder="" required="required" type="number"> </td>
+        </tr>
+        <tr>
+          <td><br>
+          </td>
+          <td>&nbsp;&nbsp;&nbsp;<button name="Submit" value="Submit" type="submit" formmethod="post">Submit</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button name="Reset" type="reset">Reset</button> <br>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    </form>
+{% endblock %}
